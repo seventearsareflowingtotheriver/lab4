@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Us - Dwarven Mining Assault Brigade</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body id="page-join">
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/logo.png" alt="Dwarven Mining Assault Brigade Logo">
+            </div>
+
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+                <li><a href="wardroom.html">Wardroom</a></li>
+                <li><a href="our_achievements.html">Our Achievements</a></li>
+                <li><a href="registration.html">Join Us</a></li>
+                <li>
+                    <form role="search">
+                        <input type="search" placeholder="Search...&#x1F50D;" aria-label="Search">
+                        <button type="submit"><i class="fas fa-search"></i></button>
+                    </form>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="join">
+            <h2>JOIN US</h2>
+
+            <form id="login-form" aria-labelledby="login-heading">
+                <h3 id="login-heading">Login</h3>
+                <label for="email-login">Email:</label>
+                <input type="email" id="email-login" name="email" required placeholder="your.email@example.com">
+                
+                <label for="password-login">Password:</label>
+                <input type="password" id="password-login" name="password" required>
+                
+                <button type="reset">Clear</button>
+                <button type="submit">Login</button>
+            </form>
+
+            <h3 class="or-between">- OR -</h3>
+            
+            <form id="registration-form" aria-labelledby="registration-heading">
+                <h3 id="registration-heading">Registration</h3>
+                <label for="email-reg">Email:</label>
+                <input type="email" id="email-reg" name="email" required placeholder="your.email@example.com">
+                
+                <label for="password-reg">Password (min 8 characters):</label>
+                <input type="password" id="password-reg" name="password" required minlength="8">
+                
+                <label for="password-confirm">Confirm Password:</label>
+                <input type="password" id="password-confirm" name="password-confirm" required>
+                
+                <button type="reset">Clear</button>
+                <button type="submit">Register</button>
+            </form>
+
+            <form id="survey-form" aria-labelledby="survey-heading">
+                <h3 id="survey-heading">Applicant Survey</h3>
+                
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required placeholder="Your dwarf name">
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="dwarf@example.com">
+                
+                <label for="message">Why Join Us?</label>
+                <textarea id="message" name="message" rows="5" required placeholder="Share your motivation..."></textarea>
+                
+                <label for="role">Preferred Role:</label>
+                <select id="role" name="role" required>
+                    <option value="" disabled selected>Select a role</option>
+                    <option value="scout">Scout</option>
+                    <option value="engineer">Engineer</option>
+                    <option value="driller">Driller</option>
+                    <option value="gunner">Gunner</option>
+                </select>
+                
+                <fieldset>
+                    <legend>Experience Level:</legend>
+                    <input type="radio" id="novice" name="experience" value="novice" required>
+                    <label for="novice">Novice Miner</label><br>
+                    <input type="radio" id="veteran" name="experience" value="veteran">
+                    <label for="veteran">Veteran Dwarf</label><br>
+                    <input type="radio" id="legendary" name="experience" value="legendary">
+                    <label for="legendary">Legendary Rock Breaker</label>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Skills (select all that apply):</legend>
+                    <input type="checkbox" id="mining" name="skills" value="mining">
+                    <label for="mining">Mining Expertise</label><br>
+                    <input type="checkbox" id="combat" name="skills" value="combat">
+                    <label for="combat">Bug Extermination</label><br>
+                    <input type="checkbox" id="building" name="skills" value="building">
+                    <label for="building">Engineering Builds</label><br>
+                    <input type="checkbox" id="drilling" name="skills" value="drilling">
+                    <label for="drilling">Drilling Mastery</label>
+                </fieldset>
+                
+                <button type="reset">Clear Form</button>
+                <button type="submit">Submit Survey</button>
+                <audio id="submission-sound" src="success.mp3" preload="auto"></audio>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Dwarven Mining Assault Brigade. Rock and Stone!</p>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+                <li><a href="wardroom.html">Wardroom</a></li>
+                <li><a href="our_achievements.html">Our Achievements</a></li>
+                <li><a href="registration.html">Join Us</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const toggleButton = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        toggleButton.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            
+            const icon = toggleButton.querySelector('i');
+            if (navLinks.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+    });
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const surveyForm = document.getElementById('survey-form');
+        const audio = document.getElementById('submission-sound');
+
+        if (surveyForm) {
+            surveyForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                if (audio) {
+                    audio.play().catch(error => console.log("Audio play error:", error));
+                }
+
+                const btn = surveyForm.querySelector('button[type="submit"]');
+                const originalText = btn.innerText;
+                btn.innerText = "Rock and Stone!";
+                btn.style.backgroundColor = "#4CAF50";
+
+                setTimeout(() => {
+                    alert("Survey submitted! Command request received.");
+                    surveyForm.submit();
+                }, 1500); 
+            });
+        }
+    });
+</script>
+
+<button id="scrollToTopBtn" title="Go to top" style="display: flex;">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const scrollBtn = document.getElementById("scrollToTopBtn");
+
+        window.addEventListener('scroll', () => {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                scrollBtn.style.display = "flex";
+            } else {
+                scrollBtn.style.display = "none";
+            }
+        });
+
+        scrollBtn.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    });
+</script>
+
+</body>
+</html>

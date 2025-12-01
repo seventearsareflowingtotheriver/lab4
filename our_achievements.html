@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Achievements - Dwarven Mining Assault Brigade</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body id="page-achieves"></body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/logo.png" alt="Dwarven Mining Assault Brigade Logo">
+
+            </div>
+
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+                <li><a href="wardroom.html">Wardroom</a></li>
+                <li><a href="our_achievements.html">Our Achievements</a></li>
+                <li><a href="registration.html">Join Us</a></li>
+                <li>
+                    <form role="search">
+                        <input type="search" placeholder="Search...&#x1F50D;" aria-label="Search">
+                        <button type="submit"><i class="fas fa-search"></i></button>
+                    </form>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="achievements">
+            <h2>OUR ACHIEVEMENTS & BATTLE HONORS</h2>
+            <p class="subtitle">Rock and Stone! These are the medals we earned in the depths of Donbas mines.</p>
+
+            <h3 class="sector-between"></h3>
+
+            <div class="achievements-grid">
+                <article class="achievement-card">
+                    <img src="images/achieves/achievement1.jpg" alt="Medal: 1000 Missions Completed">
+                    <h3>1000 Missions Completed</h3>
+                    <p>Cleared over 1000 km of infested tunnels</p>
+                    <span class="date">November 2025</span>
+                </article>
+
+                <article class="achievement-card">
+                    <img src="images/achieves/achievement2.jpg" alt="Order of the Pickaxe">
+                    <h3>Order of the Golden Pickaxe</h3>
+                    <p>Awarded for extracting 1 000 000 units of rare minerals</p>
+                    <span class="date">October 2025</span>
+                </article>
+
+                <article class="achievement-card">
+                    <img src="images/achieves/achievement3.jpg" alt="Glyphid Slayer">
+                    <h3>Glyphid Exterminator Elite</h3>
+                    <p>Eliminated 500 000 hostile bugs</p>
+                    <span class="date">September 2025</span>
+                </article>
+
+                <article class="achievement-card">
+                    <img src="images/achieves/achievement4.jpg" alt="Deep Dive Master">
+                    <h3>Deep Dive Legend</h3>
+                    <p>Successfully completed 50 Deep Dives in Hazard 5 zones</p>
+                    <span class="date">August 2025</span>
+                </article>
+
+                <article class="achievement-card">
+                    <img src="images/achieves/achievement5.jpg" alt="Beer Master">
+                    <h3>Master Brewer Certificate</h3>
+                    <p>Consumed 1 000 000 liters of Leaf Lover’s Special post-mission</p>
+                    <span class="date">Ongoing tradition</span>
+                </article>
+
+                <article class="achievement-card">
+                    <img src="images/achieves/achievement6.jpg" alt="Rock and Stone Champion">
+                    <h3>Rock and Stone Forever!</h3>
+                    <p>Shouted “Rock and Stone!” 10 000 000 times in combat</p>
+                    <span class="date">Every single day</span>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Dwarven Mining Assault Brigade. Rock and Stone!</p>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+                <li><a href="wardroom.html">Wardroom</a></li>
+                <li><a href="our_achievements.html">Our Achievements</a></li>
+                <li><a href="registration.html">Join Us</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const toggleButton = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        toggleButton.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            
+            const icon = toggleButton.querySelector('i');
+            if (navLinks.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+    });
+</script>
+
+<button id="scrollToTopBtn" title="Go to top" style="display: flex;">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const scrollBtn = document.getElementById("scrollToTopBtn");
+
+        window.addEventListener('scroll', () => {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                scrollBtn.style.display = "flex";
+            } else {
+                scrollBtn.style.display = "none";
+            }
+        });
+
+        scrollBtn.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News - Dwarven Mining Assault Brigade</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body id="page-wardroom">
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/logo.png" alt="Dwarven Mining Assault Brigade Logo">
+            </div>
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+                <li><a href="wardroom.html">Wardroom</a></li>
+                <li><a href="our_achievements.html">Our Achievements</a></li>
+                <li><a href="registration.html">Join Us</a></li>
+                <li>
+                    <form role="search">
+                        <input type="search" placeholder="Search...&#x1F50D;" aria-label="Search">
+                        <button type="submit"><i class="fas fa-search"></i></button>
+                    </form>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="news">
+            <h2>OPERATIONAL REPORTS & FRONTLINE NEWS</h2>
+            <h3 class="sector-between"></h3>
+            
+            <div class="news-grid">
+                <article class="news-card transparent-panel">
+                    <div class="news-header">
+                        <span class="news-date"><i class="far fa-calendar-alt"></i> Nov 25, 2025</span>
+                        <span class="news-tag tag-victory">Major Victory</span>
+                    </div>
+
+                    <div class="news-img-wrapper">
+                        <img src="images/news/news1.jpg" alt="Dwarves celebration">
+                        
+                        <div class="img-overlay">
+                            <span>Read Full Report <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                    <h3>Liberation of Salt Mine #4</h3>
+                    <p>Our brave Driller corps managed to collapse a key smuggling tunnel
+                         used by Russian elves, burying their supply lines under tons of
+                          glorious rock. The subsequent cavern celebration reportedly caused
+                           mild seismic activity.</p>
+                    <a href="#" class="read-more">Read Full Report -></a>
+                </article>
+
+                <article class="news-card transparent-panel">
+                    <div class="news-header">
+                        <span class="news-date"><i class="far fa-calendar-alt"></i> Nov 20, 2025</span>
+                        <span class="news-tag tag-update">Tech Update</span>
+                    </div>
+
+                    <div class="news-img-wrapper">
+                        <img src="images/news/news2.jpg" alt="Dwarves celebration">
+                        
+                        <div class="img-overlay">
+                            <span>Read Full Report <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                    <h3>New Anti-Elf Bosco Units Deployed</h3>
+                    <p>R&D has retrofitted our Bosco drones with enhanced sensors to detect
+                         pointy-ear magic signatures. Early tests in the Donetsk sector show
+                          a 400% increase in "accidental" discharges against hostile targets.</p>
+                    <a href="#" class="read-more">Technical Specs -></a>
+                </article>
+
+                <article class="news-card transparent-panel">
+                    <div class="news-header">
+                        <span class="news-date"><i class="far fa-calendar-alt"></i> Nov 15, 2025</span>
+                        <span class="news-tag tag-hero">Hero Spotlight</span>
+                    </div>
+
+                    <div class="news-img-wrapper">
+                        <img src="images/news/news3.jpg" alt="Dwarves celebration">
+                        
+                        <div class="img-overlay">
+                            <span>Read Full Report <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                    <h3>Interview: Karl's Spiritual Successor?</h3>
+                    <p>"These elves fight like leaf-lovers," says veteran Gunner 'Bore-Master'
+                         Gimli. "A little bit of minigun fire and they scatter. The real
+                          challenge is finding enough ammo for the whole horde. Rock and Stone!"</p>
+                    <a href="#" class="read-more">Read Interview -></a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Dwarven Mining Assault Brigade. Rock and Stone!</p>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+                <li><a href="wardroom.html">Wardroom</a></li>
+                <li><a href="our_achievements.html">Our Achievements</a></li>
+                <li><a href="registration.html">Join Us</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const toggleButton = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        toggleButton.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            
+            const icon = toggleButton.querySelector('i');
+            if (navLinks.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+    });
+</script>
+
+<button id="scrollToTopBtn" title="Go to top" style="display: flex;">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const scrollBtn = document.getElementById("scrollToTopBtn");
+
+        window.addEventListener('scroll', () => {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                scrollBtn.style.display = "flex";
+            } else {
+                scrollBtn.style.display = "none";
+            }
+        });
+
+        scrollBtn.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    });
+</script>
+
+</body>
+</html>
