@@ -63,6 +63,9 @@ header {
     background-color: rgba(5, 1, 26, 0.95);
     border-bottom: 3px solid var(--accent-gold);
     padding: 1rem 0;
+
+    position: relative;
+    z-index: 1000;
 }
 nav {
     display: flex;
@@ -187,7 +190,7 @@ main {
         backdrop-filter: blur(10px);
         flex-direction: column;
         padding: 20px;
-        border-radius: 8px;
+        border-radius: 10px;
         border: 1px solid var(--accent-gold);
         box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         
@@ -244,17 +247,27 @@ main {
 .cta-button {
     display: inline-block;
     background-color: var(--accent-gold);
-    color: #000;
-    padding: 12px 25px;
+    color: #111;
+    padding: 12px 30px;
+    
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1rem;
+    
     text-decoration: none;
     font-weight: bold;
+    text-transform: uppercase;
     border-radius: 5px;
     margin-top: 20px;
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 12px rgba(231, 173, 14, 0.4);
 }
-.cta-button:hover { 
+
+.cta-button:hover {
     background-color: #ffc107;
-    transform: scale(1.1); 
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 3px 16px rgba(231, 173, 14, 0.6);
 }
 
 a.card {
@@ -777,12 +790,8 @@ fieldset label:hover {
     font-size: 1.5rem;
 }
 
-/* wardroom.html */
-
-/* --- СТИЛІ ДЛЯ НОВИН (WARDROOM) --- */
 .news-grid {
     display: grid;
-    /* Сітка адаптується: 1 колонка на телефонах, 2 на планшетах, 3 на ПК */
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
