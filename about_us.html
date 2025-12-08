@@ -81,6 +81,10 @@
         </nav>
     </footer>
 
+<a href="#top" id="scrollToTopBtn" title="Go to top">
+    <i class="fas fa-arrow-up"></i>
+</a>
+    
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         const toggleButton = document.querySelector('.menu-toggle');
@@ -97,28 +101,6 @@
                 icon.classList.remove('fa-times');
                 icon.classList.add('fa-bars');
             }
-        });
-    });
-</script>
-
-<button id="scrollToTopBtn" title="Go to top">
-    <i class="fas fa-arrow-up"></i>
-</button>
-
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const scrollBtn = document.getElementById("scrollToTopBtn");
-
-        window.addEventListener('scroll', () => {
-            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-                scrollBtn.style.display = "flex";
-            } else {
-                scrollBtn.style.display = "none";
-            }
-        });
-
-        scrollBtn.addEventListener("click", () => {
-            window.scrollTo({ top: 0, behavior: "smooth" });
         });
     });
 </script>
