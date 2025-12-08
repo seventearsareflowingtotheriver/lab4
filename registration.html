@@ -151,56 +151,30 @@
             }
         });
     });
-</script>
 
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const surveyForm = document.getElementById('survey-form');
-        const audio = document.getElementById('submission-sound');
-
-        if (surveyForm) {
-            surveyForm.addEventListener('submit', function(event) {
-                event.preventDefault();
-
-                if (audio) {
-                    audio.play().catch(error => console.log("Audio play error:", error));
-                }
-
-                const btn = surveyForm.querySelector('button[type="submit"]');
-                const originalText = btn.innerText;
-                btn.innerText = "Rock and Stone!";
-                btn.style.backgroundColor = "#4CAF50";
-
-                setTimeout(() => {
-                    alert("Survey submitted! Command request received.");
-                    surveyForm.submit();
-                }, 1500); 
-            });
-        }
-    });
-</script>
-
-<button id="scrollToTopBtn" title="Go to top">
+<a href="#top" id="scrollToTopBtn" title="Go to top">
     <i class="fas fa-arrow-up"></i>
-</button>
-
+</a>
+    
 <script>
     document.addEventListener('DOMContentLoaded', () => {
-        const scrollBtn = document.getElementById("scrollToTopBtn");
+        const toggleButton = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
 
-        window.addEventListener('scroll', () => {
-            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-                scrollBtn.style.display = "flex";
+        toggleButton.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            
+            const icon = toggleButton.querySelector('i');
+            if (navLinks.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
             } else {
-                scrollBtn.style.display = "none";
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
             }
         });
-
-        scrollBtn.addEventListener("click", () => {
-            window.scrollTo({ top: 0, behavior: "smooth" });
-        });
     });
 </script>
-
+    
 </body>
 </html>
