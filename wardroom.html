@@ -119,6 +119,47 @@
         </nav>
     </footer>
 
+<a href="#top" id="scrollToTopBtn" title="Go to top">
+    <i class="fas fa-arrow-up"></i>
+</a>
+    
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const toggleButton = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        toggleButton.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            
+            const icon = toggleButton.querySelector('i');
+            if (navLinks.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+    });
+</script>
+    
+</body>
+</html>        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Dwarven Mining Assault Brigade. Rock and Stone!</p>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+                <li><a href="wardroom.html">Wardroom</a></li>
+                <li><a href="our_achievements.html">Our Achievements</a></li>
+                <li><a href="registration.html">Join Us</a></li>
+            </ul>
+        </nav>
+    </footer>
+
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         const toggleButton = document.querySelector('.menu-toggle');
