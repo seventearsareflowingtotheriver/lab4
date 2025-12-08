@@ -11,6 +11,24 @@
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Placeholder CSS file -->
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body id="page-home">
+    <header>
+        <nav>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dwarven Mining Assault Brigade</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Placeholder CSS file -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body id="page-home">
@@ -138,9 +156,9 @@
     });
 </script>
 
-<button id="scrollToTopBtn" title="Go to top">
+<a href="#top" id="scrollToTopBtn" title="Go to top">
     <i class="fas fa-arrow-up"></i>
-</button>
+</a>
 
 <div id="surveyModal" class="modal">
     <div class="modal-content">
@@ -165,9 +183,48 @@
 </div>
 
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const scrollBtn = document.getElementById("scrollToTopBtn");
+        window.openSurveyModal = function() {
+            modal.style.display = "block";
+            setTimeout(() => modal.classList.add("show"), 10);
+        }
 
+        closeBtn.onclick = () => {
+            modal.classList.remove("show");
+            setTimeout(() => modal.style.display = "none", 300);
+        }
+
+        window.onclick = (event) => {
+            if (event.target == modal) {
+                modal.classList.remove("show");
+                setTimeout(() => modal.style.display = "none", 300);
+            }
+        }
+    });
+</script>
+
+</body>
+</html>            <div class="logo">
+                <img src="images/logo.png" alt="logo">
+            </div>
+
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+                <li><a href="wardroom.html">Wardroom</a></li>
+                <li><a href="our_achievements.html">Our Achievements</a></li>
+                <li><a href="registration.html">Join Us</a></li>
+                <li>
+                    <form role="search">
+                        <input type="search" placeholder="Search...&#x1F50D;" aria-label="Search">
+                        <button type="submit"><i class="fas fa-search"></i></button>
+                    </form>
+                </li>
+            </ul>
+        </nav>
         window.addEventListener('scroll', () => {
             if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
                 scrollBtn.style.display = "flex";
