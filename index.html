@@ -4,128 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dwarven Mining Assault Brigade</title>
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- Placeholder CSS file -->
+
     <link rel="stylesheet" href="styles/styles.css">
 </head>
+
 <body id="page-home">
-    <header>
-        <nav>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dwarven Mining Assault Brigade</title>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- Placeholder CSS file -->
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body id="page-home">
-    <header>
-        <nav>
-            <div class="logo">
-                <img src="images/logo.png" alt="logo">
-            </div>
+<header>
+    <nav>
+        <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="Logo">
+        </a>
 
-            <button class="menu-toggle" aria-label="Toggle navigation">
-                <i class="fas fa-bars"></i>
-            </button>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
 
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about_us.html">About Us</a></li>
-                <li><a href="wardroom.html">Wardroom</a></li>
-                <li><a href="our_achievements.html">Our Achievements</a></li>
-                <li><a href="registration.html">Join Us</a></li>
-                <li>
-                    <form role="search">
-                        <input type="search" placeholder="Search...&#x1F50D;" aria-label="Search">
-                        <button type="submit"><i class="fas fa-search"></i></button>
-                    </form>
-                </li>
-            </ul>
-        </nav>
-    </header>
+        <label for="nav-toggle" class="hamburger-btn">
+            <i class="fas fa-bars"></i>
+        </label>
 
-    <main>
-        <section id="hero">
-            <h2>Rock and Stone! Mobilize for Donbas Mines Clearance</h2>
-            <p>Join the ranks of elite dwarf-miners from Deep Rock Galactic
-                 to clear the shafts of Donbas from hostile bugs and reclaim the depths.</p>
-            <button onclick="window.openSurveyModal()" class="cta-button">Enlist Now!</button>
-        </section>
+        <div class="nav-menu">
+            <label for="nav-toggle" class="close-btn">
+                <i class="fas fa-times"></i>
+            </label>
 
-        <section id="roles">
-            <h2>CHOOSE YOUR PATH</h2>
-            <h3 class="sector-between"></h3>
-
-            <div class="card-grid">
-                <a href="registration.html" class="card">
-                    <img src="images/dwarves/scout.png" alt="Scout Dwarf">
-                    <h3>Scout</h3>
-                    <p>Zip through tunnels, light up the dark, and spot enemies from afar.</p>
-                </a> 
-                
-                <a href="registration.html" class="card">
-                    <img src="images/dwarves/engineer.png" alt="Engineer Dwarf">
-                    <h3>Engineer</h3>
-                    <p>Build turrets, platforms, and defenses to hold the line against swarms.</p>
-                </a>
-
-                <a href="registration.html" class="card">
-                    <img src="images/dwarves/driller.png" alt="Driller Dwarf">
-                    <h3>Driller</h3>
-                    <p>Bore through rock, create paths, and melt foes with your drills.</p>
-                </a>
-
-                <a href="registration.html" class="card">
-                    <img src="images/dwarves/gunner.png" alt="Gunner Dwarf">
-                    <h3>Gunner</h3>
-                    <p>Provide heavy firepower and ziplines for team mobility.</p>
-                </a>
-            </div>
-        </section>
-
-        <h3 class="sector-between"></h3>
-
-        <section id="special-units">
-            <h2>Special Directions</h2>
-            <ul>
-                <li><i class="fas fa-robot"></i> Drone Operators: Control Bosco to scout ahead.</li>
-                <li><i class="fas fa-shield-alt"></i> Anti-Swarm Defenses: Set up kill zones.</li>
-                <li><i class="fas fa-medkit"></i> Medical Support: Revive fallen comrades.</li>
-            </ul>
-        </section>
-
-        <h3 class="sector-between"></h3>
-
-        <section id="faq">
-            <h2>Frequently Asked Questions</h2>
-            <details>
-                <summary>What is required to join?</summary>
-                <p>A love for mining, hatred for bugs, and a sturdy beard (optional).</p>
-            </details>
-            <details>
-                <summary>Do I need prior experience?</summary>
-                <p>Experience in Deep Rock Galactic is a plus, but we train all recruits.</p>
-            </details>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 Dwarven Mining Assault Brigade. Rock and Stone!</p>
-        <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about_us.html">About Us</a></li>
@@ -133,131 +41,123 @@
                 <li><a href="our_achievements.html">Our Achievements</a></li>
                 <li><a href="registration.html">Join Us</a></li>
             </ul>
-        </nav>
-    </footer>
 
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const toggleButton = document.querySelector('.menu-toggle');
-        const navLinks = document.querySelector('.nav-links');
+            <form role="search">
+                <input type="text" placeholder="Search..." aria-label="Search">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
 
-        toggleButton.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            
-            const icon = toggleButton.querySelector('i');
-            if (navLinks.classList.contains('active')) {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times');
-            } else {
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            }
-        });
-    });
-</script>
+        <label for="nav-toggle" class="backdrop"></label>
+    </nav>
+</header>
+
+<main>
+    <section id="hero">
+        <h2>Rock and Stone! Mobilize for Donbas Mines Clearance</h2>
+        <p>Join the ranks of elite dwarf-miners from Deep Rock Galactic
+        to clear the shafts of Donbas from hostile bugs and reclaim the depths.</p>
+
+        <a href="#modal" class="cta-button" role="button" tabindex="0">Enlist Now!</a>
+    </section>
+
+    <section id="roles">
+        <h2>CHOOSE YOUR PATH</h2>
+        <h3 class="sector-between"></h3>
+
+        <div class="card-grid">
+            <a href="registration.html" class="card">
+                <img src="images/dwarves/scout.png" alt="Scout Dwarf">
+                <h3>Scout</h3>
+                <p>Zip through tunnels, light up the dark, and spot enemies from afar.</p>
+            </a>
+
+            <a href="registration.html" class="card">
+                <img src="images/dwarves/engineer.png" alt="Engineer Dwarf">
+                <h3>Engineer</h3>
+                <p>Build turrets, platforms, and defenses to hold the line against swarms.</p>
+            </a>
+
+            <a href="registration.html" class="card">
+                <img src="images/dwarves/driller.png" alt="Driller Dwarf">
+                <h3>Driller</h3>
+                <p>Bore through rock, create paths, and melt foes with your drills.</p>
+            </a>
+
+            <a href="registration.html" class="card">
+                <img src="images/dwarves/gunner.png" alt="Gunner Dwarf">
+                <h3>Gunner</h3>
+                <p>Provide heavy firepower and ziplines for team mobility.</p>
+            </a>
+        </div>
+    </section>
+
+    <h3 class="sector-between"></h3>
+
+    <section id="special-units">
+        <h2>Special Directions</h2>
+        <ul>
+            <li><i class="fas fa-robot"></i> Drone Operators: Control Bosco to scout ahead.</li>
+            <li><i class="fas fa-shield-alt"></i> Anti-Swarm Defenses: Set up kill zones.</li>
+            <li><i class="fas fa-medkit"></i> Medical Support: Revive fallen comrades.</li>
+        </ul>
+    </section>
+
+    <h3 class="sector-between"></h3>
+
+    <section id="faq">
+        <h2>Frequently Asked Questions</h2>
+
+        <details>
+            <summary>What is required to join?</summary>
+            <p>A love for mining, hatred for bugs, and a sturdy beard (optional).</p>
+        </details>
+
+        <details>
+            <summary>Do I need prior experience?</summary>
+            <p>Experience in Deep Rock Galactic is a plus, but we train all recruits.</p>
+        </details>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Dwarven Mining Assault Brigade. Rock and Stone!</p>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about_us.html">About Us</a></li>
+            <li><a href="wardroom.html">Wardroom</a></li>
+            <li><a href="our_achievements.html">Our Achievements</a></li>
+            <li><a href="registration.html">Join Us</a></li>
+        </ul>
+    </nav>
+</footer>
 
 <a href="#top" id="scrollToTopBtn" title="Go to top">
     <i class="fas fa-arrow-up"></i>
 </a>
 
-<div id="surveyModal" class="modal">
+<div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
     <div class="modal-content">
-        <span class="close-btn">&times;</span>
-        
-        <h2 style="text-align: center; color: var(--accent-gold); margin-bottom: 20px;">Join the Brigade</h2>
-        
+        <!-- close by navigating away from the target -->
+        <a href="#" class="modal-close" aria-label="Close">&times;</a>
+
+        <h2 id="modal-title" style="text-align: center; color: var(--accent-gold); margin-bottom: 20px;">Join the Brigade</h2>
+
         <form id="popup-survey-form" style="display: flex; flex-direction: column; gap: 15px;">
-            
             <label for="pop-username">Username:</label>
             <input type="text" id="pop-username" required placeholder="Your dwarf name">
-            
+
             <label for="pop-email">Email:</label>
             <input type="email" id="pop-email" required placeholder="dwarf@example.com">
-            
+
             <label for="pop-message">Why Join Us?</label>
             <textarea id="pop-message" rows="3" required placeholder="Share your motivation..."></textarea>
-            
+
             <button type="submit">Submit Application</button>
         </form>
     </div>
 </div>
-
-<script>
-        window.openSurveyModal = function() {
-            modal.style.display = "block";
-            setTimeout(() => modal.classList.add("show"), 10);
-        }
-
-        closeBtn.onclick = () => {
-            modal.classList.remove("show");
-            setTimeout(() => modal.style.display = "none", 300);
-        }
-
-        window.onclick = (event) => {
-            if (event.target == modal) {
-                modal.classList.remove("show");
-                setTimeout(() => modal.style.display = "none", 300);
-            }
-        }
-    });
-</script>
-
-</body>
-</html>            <div class="logo">
-                <img src="images/logo.png" alt="logo">
-            </div>
-
-            <button class="menu-toggle" aria-label="Toggle navigation">
-                <i class="fas fa-bars"></i>
-            </button>
-
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about_us.html">About Us</a></li>
-                <li><a href="wardroom.html">Wardroom</a></li>
-                <li><a href="our_achievements.html">Our Achievements</a></li>
-                <li><a href="registration.html">Join Us</a></li>
-                <li>
-                    <form role="search">
-                        <input type="search" placeholder="Search...&#x1F50D;" aria-label="Search">
-                        <button type="submit"><i class="fas fa-search"></i></button>
-                    </form>
-                </li>
-            </ul>
-        </nav>
-        window.addEventListener('scroll', () => {
-            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-                scrollBtn.style.display = "flex";
-            } else {
-                scrollBtn.style.display = "none";
-            }
-        });
-
-        scrollBtn.addEventListener("click", () => {
-            window.scrollTo({ top: 0, behavior: "smooth" });
-        });
-
-        const modal = document.getElementById("surveyModal");
-        const closeBtn = document.querySelector(".close-btn");
-
-        window.openSurveyModal = function() {
-            modal.style.display = "block";
-            setTimeout(() => modal.classList.add("show"), 10);
-        }
-
-        closeBtn.onclick = () => {
-            modal.classList.remove("show");
-            setTimeout(() => modal.style.display = "none", 300);
-        }
-
-        window.onclick = (event) => {
-            if (event.target == modal) {
-                modal.classList.remove("show");
-                setTimeout(() => modal.style.display = "none", 300);
-            }
-        }
-    });
-</script>
 
 </body>
 </html>

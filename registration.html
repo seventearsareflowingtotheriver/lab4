@@ -8,34 +8,43 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body id="page-join">
     <header>
-        <nav>
-            <div class="logo">
-                <img src="images/logo.png" alt="Dwarven Mining Assault Brigade Logo">
-            </div>
+    <nav>
+        <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="Logo">
+        </a>
 
-            <button class="menu-toggle" aria-label="Toggle navigation">
-                <i class="fas fa-bars"></i>
-            </button>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
 
-            <ul class="nav-links">
+        <label for="nav-toggle" class="hamburger-btn">
+            <i class="fas fa-bars"></i>
+        </label>
+
+        <div class="nav-menu">
+            <label for="nav-toggle" class="close-btn">
+                <i class="fas fa-times"></i>
+            </label>
+
+            <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about_us.html">About Us</a></li>
                 <li><a href="wardroom.html">Wardroom</a></li>
                 <li><a href="our_achievements.html">Our Achievements</a></li>
                 <li><a href="registration.html">Join Us</a></li>
-                <li>
-                    <form role="search">
-                        <input type="search" placeholder="Search...&#x1F50D;" aria-label="Search">
-                        <button type="submit"><i class="fas fa-search"></i></button>
-                    </form>
-                </li>
             </ul>
-        </nav>
-    </header>
+
+            <form role="search">
+                <input type="text" placeholder="Search..." aria-label="Search">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+
+        <label for="nav-toggle" class="backdrop"></label>
+    </nav>
+</header>
 
     <main>
         <section id="join">
@@ -151,6 +160,7 @@
             }
         });
     });
+</script>
 
 <a href="#top" id="scrollToTopBtn" title="Go to top">
     <i class="fas fa-arrow-up"></i>
